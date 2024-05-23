@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>预备聊天室</title>
+
+
+  <style type="text/css">
+    body {
+      background-color: #f5eedb;
+      text-align: center;
+    }
+    .myButton {
+      background-color:#a8a396;
+      border-radius:28px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:20px;
+      padding:16px 31px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #2f6627;
+    }
+    .myButton:hover {
+      background-color:#cec8b8;
+    }
+    .myButton:active {
+      position:relative;
+      top:1px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: #282623;">roos list</h1>
+  <br><br>
+  <div class="room-box" id="room-box">
+    <a>如果你看到这个那一定是js爆炸了</a>
+  <div>
+  
+</body>
+<script>
+  let rooms = {
+    '418':"https://hack.chat/?418chat",
+    '414':"https://hack.chat/?414chat",
+    '410':"https://hack.chat/?410chat",
+    'backup':"https://hack.chat/?affogato"
+  }
+
+  var box=document.getElementById("room-box");
+  
+  box.innerHTML=''
+
+  Object.entries(rooms).forEach(([key,value])=>{
+    box.innerHTML+=`<a class="myButton" href="${value}">${key}chat</a>
+                    <br><br><br><br>`
+  })
+
+</script>
+</html>
