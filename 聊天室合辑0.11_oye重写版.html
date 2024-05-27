@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>预备聊天室</title>
+  <title>聊天室</title>
 
 
   <style type="text/css">
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-  <h1 style="color: #282623;">roos list</h1>
+  <h1 style="color: #282623;">房间列表</h1>
   <br><br>
   <div class="room-box" id="room-box">
     <a>如果你看到这个那一定是js爆炸了</a>
@@ -42,10 +42,10 @@
 </body>
 <script>
   let rooms = {
-    '418':"https://hack.chat/?418chat",
-    '414':"https://hack.chat/?414chat",
-    '410':"https://hack.chat/?410chat",
-    'backup':"https://hack.chat/?affogato"
+    '418':"https://hach.chat/?418roomchat",
+    '414':"https://hach.chat/?414roomchat",
+    '410':"https://hach.chat/?410roomchat",
+    'backup':"https://hach.chat/?affogato"
   }
 
   var box=document.getElementById("room-box");
@@ -53,7 +53,7 @@
   box.innerHTML=''
 
   Object.entries(rooms).forEach(([key,value])=>{
-    box.innerHTML+=`<a class="myButton" href="${value}">${key}chat</a>
+    box.innerHTML+=`<a class="myButton" href="${value}">${key}聊天室</a>
                     <br><br><br><br>`
   })
 
