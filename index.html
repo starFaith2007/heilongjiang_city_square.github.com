@@ -2,60 +2,59 @@
 <html>
 
 <head>
-  <标题>聊天室合集</标题>
+  <title>聊天室</title>
 
 
-  <风格 类型="text/css">
-    身体{
-      背景色: #f5eedb;
-      文本对齐： 中心；
+  <style type="text/css">
+    body {
+      background-color: #f5eedb;
+      text-align: center;
     }
-    . 我的按钮 {
-      背景色:#a8a396;
-      边界半径：28px；
-      显示：内联块；
-      光标：指针；
-      颜色#ffffff ；
-      字体系列：阿里亚尔；
-      字体大小：20px；
-      填充物：16px 31px；
-      文字装饰：无；
-      文本阴影：0px 1px 0px #2f6627;
+    .myButton {
+      background-color:#a8a396;
+      border-radius:28px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:20px;
+      padding:16px 31px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #2f6627;
     }
-    .我的按钮：悬停 {
-      背景色:#cec8b8;
+    .myButton:hover {
+      background-color:#cec8b8;
     }
-    .我的按钮：活动 {
-      位置：相对的；
-      顶：1px；
+    .myButton:active {
+      position:relative;
+      top:1px;
     }
-  </风格>
-</头>
+  </style>
+</head>
 
-<体>
-  <h1 风格="颜色: #282623;">房间列表</h1>
-  <布洛克><布洛克>
-  <div 类=“房间盒” 编号=“房间盒”>
+<body>
+  <h1 style="color: #282623;">房间列表</h1>
+  <br><br>
+  <div class="room-box" id="room-box">
     <a>如果你看到这个那一定是js爆炸了</a>
   <div>
   
-</体>
-<脚本>
-  让 房间 = {
-    '418'："https://hach.chat/?418chat"，
-    '414'："https://hach.chat/?414chat"，
-    '410'："https://hach.chat/?410chat"，
-    '备用'："https://hach.chat/?affogato"
+</body>
+<script>
+  let rooms = {
+    '418':"https://hach.chat/?418roomchat",
+    '414':"https://hach.chat/?414roomchat",
+    '410':"https://hach.chat/?410roomchat",
+    'backup':"https://hach.chat/?affogato"
   }
 
-  变数 盒子=文档。getElementById(“房间盒”)；
+  var box=document.getElementById("room-box");
   
-  盒子。内部HTML=''
+  box.innerHTML=''
 
-  对象。条目(房间).对于每个(([钥匙，值])=>{
-    盒子。内部HTML+=`<a 类=“我的按钮” #*@$4="${值}">${钥匙}聊天室</a>
-                    <布洛克><布洛克><布洛克><布洛克>`
+  Object.entries(rooms).forEach(([key,value])=>{
+    box.innerHTML+=`<a class="myButton" href="${value}">${key}聊天室</a>
+                    <br><br><br><br>`
   })
 
-脚本
-</html>
+</script>
