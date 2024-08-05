@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>聊天室</title>
+  <title>哈现服交流板块</title>
 
 
   <style type="text/css">
@@ -33,20 +33,23 @@
 </head>
 
 <body>
-  <h1 style="color: #282623;">房间列表</h1>
-  <br><br>
+  <h1 style="color: #282623;">哈尔滨现代服务交流版</h1>
+    
+  <h3><div id="footer" style="background-color:#CFE0E9;clear:both;text-align:center;">
+  表达不应有价格——至关重要	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;有问题请反馈：<a href="https://note.ms/xdfw">庞贝记录</a></div>  
+  <h4>可用区块</h4>
+  <br>
   <div class="room-box" id="room-box">
     <a>如果你看到这个那一定是js爆炸了</a>
   <div>
-  
+  </div></h3>
 </body>
 <script>
   let rooms = {
-    '418':"https://hach.chat/?418roomchat",
-    '414':"https://hach.chat/?414roomchat",
-    '410':"https://hach.chat/?410roomchat",
-    '备用':"https://hach.chat/?affogato",
-    '匿名留言板，非':"https://note.ms/xdfw"
+    '热点交流':"https://hach.chat/?hxfhotchat",
+    '游戏开黑':"https://hach.chat/?hxfgameplaychat",
+    '实时求助':"https://hach.chat/?hxfhelperchat",
+    '哈现服表白墙':"39.101.77.64:3000"
   }
 
   var box=document.getElementById("room-box");
@@ -54,9 +57,11 @@
   box.innerHTML=''
 
   Object.entries(rooms).forEach(([key,value])=>{
-    box.innerHTML+=`<a class="myButton" href="${value}">${key}聊天室</a>
-                    <br><br><br><br>`
+    box.innerHTML+=`<a class="myButton" href="${value}">${key}</a>&nbsp;&nbsp;&nbsp;
+                     <br><br>`
   })
 
 </script>
-</html>
+
+
+</html> 
